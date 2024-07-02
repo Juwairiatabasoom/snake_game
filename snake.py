@@ -21,14 +21,14 @@ class Snake:
         for position in starting_positions:
             self.add_segment(position)
 
-
-
     def add_segment(self,position):
         snake = Turtle("square")
         snake.color("Green")
         snake.penup()
         snake.goto(position)
         self.segments.append(snake)
+
+    
     def extend(self):
         self.add_segment(self.segments[-1].position())
 
