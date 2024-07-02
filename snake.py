@@ -1,6 +1,5 @@
 from turtle import Turtle
 
-MOVE_DISTANCE = 20
 starting_positions=[(0,0),(-20,0),(-40,0)]
 segments = []
 UP= 90
