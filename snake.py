@@ -1,5 +1,6 @@
 from turtle import Turtle
 
+MOVE_DISTANCE = 20
 starting_positions=[(0,0),(-20,0),(-40,0)]
 segments = []
 UP= 90
@@ -28,9 +29,16 @@ class Snake:
         snake.goto(position)
         self.segments.append(snake)
 
-    
+
     def extend(self):
         self.add_segment(self.segments[-1].position())
+
+    def reset_the_snake(self):
+        for seg in self.segments:
+            seg.goto(10000,10000)  #shifting the snake to a place where its not visible
+        self.segments.clear()
+        self.create_snake()
+        self.head=self.segments[0]
 
 
     def move(self):
